@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM Color Changer Hands-On Activity #2</title>
+    <style>
+        h1 {
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+            color: purple;
+            border: 4px solid;
+            border-style: dashed;
+            font-size: 40px;
+            padding: 2px;
+            
+        }
+        #col{
+          background-color: rgb(19, 177, 19);
+          width: 200px;
+          height: 100px;
+          padding: 20px;  
+          border-radius: 20px;
+          
+    
+          
+        }
+
+        button {
+            padding: 10px;
+            background-color: aqua;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 12px;
+            border: 2px solid;
+            border-radius: 10px;
+            display: inline-block;
+            text-align: center;
+            margin-top: 10px;
+            
+            
+           
+        }
+
+        body {
+            background-color: lightpink;
+            text-align: center;
+            max-width: 2500px;
+            margin: auto;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+            margin: 0;
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>JavaScript colorChanger() Hands-On</h1>
+
+    
+    <div id="col"></div>
+    <button id="Btn">Change Color</button>
+    <script>
+        let colorBox = document.getElementById("col");
+        let Btn = document.getElementById("Btn");
+
+        Btn.addEventListener("click", changeColor)
+
+        function changeColor() {
+            if (colorBox.style.backgroundColor === 'green') {
+                colorBox.style.backgroundColor = 'blue'
+            } else {
+            colorBox.style.backgroundColor = 'green';
+     }
+    }
+    </script>
+</body>
+</html>
